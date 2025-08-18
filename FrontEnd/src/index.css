@@ -1,0 +1,272 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.center {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.bg_color {
+  background-color: rgb(237, 235, 235);
+}
+
+.hero_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 2%;
+}
+
+.jobs_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0;
+}
+
+.filtering {
+  display: flex;
+  flex-direction: column;
+}
+
+.filtering > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  gap: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.tags_container {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.dropdown select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  outline: none;
+}
+
+.dropdown select:hover {
+  border-color: black;
+  cursor: pointer;
+}
+
+.filtering button {
+  padding: 8px 16px;
+  border: 1px solid #929394;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filtering button:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.add_job_btn {
+  padding: 10px 20px;
+  background-color: rgb(33, 33, 33);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 2%;
+}
+
+.add_job_btn:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.job_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.job_container > h1 {
+  text-align: center;
+}
+
+.jobs_card_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+  justify-content: flex-start;
+}
+
+.jobs_card {
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 18px;
+  margin: 15px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.jobs_card .job_title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.jobs_card p {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0;
+}
+
+.jobs_card .job_type {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #007bff;
+  background: #eef5ff;
+  border-radius: 14px;
+  margin-top: 8px;
+}
+
+.card_actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.card_actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.card_actions .edit_btn {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.card_actions .delete_btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.add_job_form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.add_job_form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 22px;
+}
+
+.job_form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.job_form input,
+.job_form select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.job_form input:focus,
+.job_form select:focus {
+  border-color: #007bff;
+}
+
+.save_btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.save_btn:hover {
+  background-color: #0056b3;
+}
+
+.back_btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #6c757d;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.back_btn:hover {
+  background-color: #5a6268;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+
+@media (max-width: 600px) {
+  .jobs_container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add_job_btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .filtering button {
+    width: 100%;
+  }
+
+  .jobs_card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
