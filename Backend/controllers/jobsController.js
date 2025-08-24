@@ -5,7 +5,7 @@ exports.createJob = (req, res) => {
 
   // console.log(req.body);
 
-  if (!title || !company || !location || !posting_date || !job_type) {
+  if (!title || !company || !location || !posting_date) {
     return res.status(400).json({ error: "Please fill all required fields" });
   }
 
